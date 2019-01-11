@@ -1,0 +1,19 @@
+<div class="register">
+  <h3>Register</h3>
+  <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    
+    <app-personal-info [group]="registerForm.controls.personal"></app-personal-info>
+
+    <app-address [group]="registerForm.controls.address"></app-address>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" />
+    </div>
+    <div class="form-group">
+      <label for="passwordConfirmation">Confirm Password</label>
+      <input type="password" formControlName="passwordConfirmation" />
+    </div>
+    <app-submit-btn [form]="registerForm"></app-submit-btn>
+  </form>
+</div>

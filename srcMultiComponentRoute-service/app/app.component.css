@@ -1,0 +1,23 @@
+
+.address {
+  margin-bottom: 10px;
+}
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .city-state {
+    display: flex;
+  }
+    .city {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .state {
+      flex: 0 0 auto;
+      margin-right: 10px;
+    }
+    .zip {
+      flex: 0 0 100px;
+    }
+  
