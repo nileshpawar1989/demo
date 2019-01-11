@@ -1,0 +1,18 @@
+<div [formGroup]="personalForm" class="persoal">
+  <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" formControlName="email" />
+      <div *ngIf="personalForm.touched && personalForm.controls.email.errors" class="invalid-feedback">
+          <div *ngIf="personalForm.controls.email.errors.required">Email is required</div>
+          <div *ngIf="personalForm.controls.email.errors.email">Email must be a valid email address</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="first_name">First Name</label>
+      <input type="text" formControlName="first_name" />
+    </div>
+    <div class="form-group">
+      <label for="last_name">Last Name</label>
+      <input type="text" formControlName="last_name" />
+    </div>
+</div>
