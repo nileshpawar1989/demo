@@ -1,0 +1,64 @@
+<div class="container">
+  <h2>Stacked form</h2>
+  <form (ngSubmit)="onSubmit()" [formGroup]="complaintForm">
+    <div class="row">
+        <label>Name:</label>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" formControlName="fName" placeholder="" name="fName">
+        <label >First Name</label>
+      </div>
+      <div class="form-group col-sm-6">
+        <input type="text" class="form-control" formControlName="lName" placeholder="" name="lName">
+        <label >Password:</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <label >Email:</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="" name="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <label >Phone:</label>
+        <input type="text" class="form-control" formControlName="phone" placeholder="" name="phone">
+      </div>
+    </div>
+    <div formGroupName="address">
+      <div class="row">
+        <div class="form-group col-sm-12">
+          <label >Adddress:</label>
+          <input type="text" class="form-control" formControlName="address1" placeholder="" name="address1"><br>
+          <input type="text" class="form-control" formControlName="address2" placeholder="" name="address2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-5">
+          <input type="text" class="form-control" formControlName="city" placeholder="" name="city">
+          <label >City</label>
+        </div>
+        <div class="form-group col-sm-4">
+          <select formControlName="states" class="col-sm-12">
+            <option *ngFor="let state of states" [ngValue]="states">{{state}}</option>
+          </select>
+          <label >State</label>
+        </div>
+        <div class="form-group col-sm-3">
+          <input type="text" class="form-control" formControlName="zip" placeholder="" name="zip">
+          <label >Zip Code</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comment">comment 1</label>
+      <textarea class="form-control" rows="5" formControlName="comment1"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="comment">comment 2 </label>
+      <textarea class="form-control" rows="5" formControlName="comment2"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
